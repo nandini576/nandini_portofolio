@@ -6,7 +6,8 @@
             padding: 0;
             box-sizing: border-box;   
         }
-        button {
+        button,a{
+            text-decoration: none;
             padding: 1rem;
             border-radius: 1rem;
             font-size: 1rem;
@@ -22,6 +23,9 @@
         body{
             background-color: lightgray;
         }
+        .course,.year,.project-description a, .title,.form-elements label,.name{     
+            color: rgb(9, 80, 123);
+        }
 
         /* hero-section */
         .hero-section {
@@ -34,6 +38,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 4rem;
         }
         .name-section {
             color: white;
@@ -59,10 +64,10 @@
             box-shadow: 0.3rem 0.3rem 0.5rem rgb(25, 96, 140);
             background: linear-gradient(to left, rgb(10, 54, 71), rgb(93, 134, 182));
             color: white;
-            display: block;
+            display: inline-block;
             margin-top: 5rem;
             animation: move 1.5s ease infinite;
-            border: none
+            border: none;
         }
 
         .hero-section .know-more:hover {
@@ -94,7 +99,7 @@
         }
 
         /* hidden-description */
-        .hidden-description {
+        /* .hidden-description {
             width:70vw;
             position: fixed;
             top: 50%;
@@ -106,32 +111,35 @@
             border-radius: 2rem;
             box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
             padding: 3rem;
-        }
-        .hidden-description p {
+        } */
+        /* .hidden-description p {
             width: 90%;
             font-size: 1.6rem;
             line-height: 2.3rem;
-        }
+        } */
 
-        .hidden-description h3 {
+        /* .hidden-description h3 {
             font-weight: bold;
             font-size: 2rem;
             margin-top: 3rem;
             margin-bottom: 1rem;
-        }
+        } */
 
         .skills-image {
             display: flex;
             justify-content: space-evenly;
-            margin-top: -2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .skills {
             display: flex;
-            gap: 1.5rem;
-            align-content: center;
-            width: 35%;
-            flex-wrap: wrap;
+            row-gap: 1.5rem;
+            width: 40%;
+            align-items: center;
+        }
+        .inner-skills{
+            margin-top: 1rem;
         }
         .inner-skills {
             width: auto;
@@ -142,22 +150,24 @@
             display: inline-block;
             text-align: center;
         }
-        .hidden-description .close {
-            width: 7rem;
-            background-color: rgb(215 222 228);
-            border: 0.2rem solid rgb(3, 9, 18);
-            padding: 0.5rem;
+        #about-me{
+            font-size: 1.2rem;
+            opacity: 0.8;
+            width: 90%;
+            text-align: left;
+            padding: 2rem;
+            line-height: 2rem;
+            margin-left: 2rem;
         }
-        .hidden-description .close:hover {
-            transform: scale(0.9);
-            transition: transform 0.2s ease-in-out;
-        }
-        .hidden-description img {
-            width: 40%;
-            height: 30%;
+
+        .name{
+            font-size: 2rem;
+            font-weight: bold;
+            white-space: nowrap;
         }
 
         /* education-section */
+
          .education-section {
             margin-top: 3rem;
             display: flex;
@@ -182,9 +192,7 @@
             transform: scale(0.9);
             transition: transform 0.2s;
         }
-        .course,.year,.project-description a, .title,.form-elements label{     
-            color: rgb(9, 80, 123);
-        }
+        
         .course {
             text-align: center;
             font-size: 1.6rem;
@@ -368,15 +376,17 @@
             }
             .social-media-links{
                 flex-direction: row;
+                margin-bottom: 2rem;
             }
             .top{
                 padding:0.2rem;
                 border-radius: 0.5rem;
                 font-size: 0.8rem;
-                margin-bottom: 1.5
-                rem;
-
+                margin-bottom: 1.5rem;
                 }
+            h2,h3,span{
+                font-size: 1.5rem;
+            }
             
          }
          @media (max-width:650px){
@@ -387,38 +397,25 @@
                 width: 100%;
 
             }
+            .skills-image img{
+                width: 60%;
+            }
          }
          @media (max-width:890px){
-            .hidden-description{
-                padding: 2rem;
-                border-radius: 1rem;
-            }
-            .hidden-description p{
-                font-size: 1.2rem;
-             }
-             .hidden-description h3{
-                font-size: 1.5rem;
-                margin-top: 1rem;
-                margin-bottom: 0.5rem;
-             }
             .skills {
                 flex-direction: column;
                 gap: 0.5rem;
                 align-content: center;
                 margin-top: 1rem;
+                width: 75%; 
+                justify-content: center;
             }
             .inner-skills{
                 padding: auto;
+                font-size: 1rem;
             }
             .special-skills{
                 display: none;
-            }
-            .hidden-description img{
-                width: 55%;
-            }
-            .hidden-description .close{
-                width: 5rem;
-                margin-top: 2rem;
             }
             .education-section{
                 flex-direction: column;
@@ -442,7 +439,7 @@
             .title{
                 font-size: 1.2rem;
             }
-            h3,h3{
+            h2,h3{
                 font-size: 1.2rem;
             }
         }  
@@ -457,10 +454,7 @@
                 width: 80%;
                 height: auto;
             }
-            .skills {
-                width: 100%; 
-                justify-content: center;
-            }
+           
 
             .skills-image {
                 flex-direction: column;
